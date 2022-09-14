@@ -75,12 +75,12 @@
                 <el-input v-model="form.sell" />
             </div>
         </el-form-item>
-        <el-form-item label="年回报率 >" class="annualizedReturn">
+        <el-form-item label="年回报率" class="annualizedReturn">
             <div class="item">
                 <el-input v-model="form.annualizedReturn" />
             </div>
         </el-form-item>
-        <el-form-item label="持债时长 <" class="holdDuration">
+        <el-form-item label="持债时长 ≤" class="holdDuration">
             <div class="item">
                 <el-input v-model="form.holdDuration" />
             </div>

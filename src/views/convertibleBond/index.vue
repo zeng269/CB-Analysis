@@ -92,7 +92,7 @@ export default {
                 // 根据卖出价、年回报率、持债时长计算买入价，进行筛选
                 if (this.filters.sell && this.filters.annualizedReturn && this.filters.holdDuration) {
                     const buyPrice = this.filters.sell - (this.filters.annualizedReturn * this.filters.holdDuration)
-                    buyPass = item.price < buyPrice
+                    buyPass = item.price <= buyPrice
                 }
 
                 pass = pricePass && pbPass && interestDebtRatePass && stockPledgePass && totalMarketValuePass 
