@@ -91,7 +91,7 @@ export default {
                 expireIncomeRatePass = item.ytm_rt > this.filters.expireIncomeRate
                 // 根据卖出价、年回报率、持债时长计算买入价，进行筛选
                 if (this.filters.sell && this.filters.annualizedReturn && this.filters.holdDuration) {
-                    const buyPrice = this.filters.sell - (this.filters.annualizedReturn * this.filters.holdDuration)
+                    const buyPrice = 100 * this.filters.sell / (this.filters.annualizedReturn * this.filters.holdDuration + 100)
                     buyPass = item.price <= buyPrice
                 }
 
